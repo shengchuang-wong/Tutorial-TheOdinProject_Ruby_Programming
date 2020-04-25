@@ -20,3 +20,37 @@ Then, run this command:
 
 #### Note
 - In Ruby, everything is an object
+
+#### Rbenv issue with vscode plugin (install, set execution path and restart)
+The accepted answer didn't work for me. However, I did find a comment by jdarnok on this GitHub issue that worked for me.
+
+First, to get the user's path of the program file, I ran:
+
+rbenv which rubocop
+
+which gave me this result:
+
+/Users/johnstewart/.rbenv/versions/2.6.2/gemsets/Rails4.2_EnergyLink/bin/rubocop
+
+Then I ran:
+
+which rubocop
+
+which gave me this result:
+
+/Users/johnstewart/.rbenv/shims/rubocop
+
+SOLUTION
+
+In the settings of VS Code under Ruby > Rubocop: Execute Path I pasted:
+
+/Users/johnstewart/.rbenv/shims/
+
+Other potential solutions
+
+This Stackoverflow post refers to a few other potential solutions, such as:
+
+Replace bin in the PATH with wrappers
+Refresh executable hooks
+Update bundler
+Update gems
