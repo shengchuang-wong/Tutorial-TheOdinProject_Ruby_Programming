@@ -21,6 +21,12 @@ Then, run this command:
 #### Note
 - In Ruby, everything is an object
 
+#### Setup Test
+- `gem install rspec`
+- `rspec --init`
+- Create test file inside /spec
+
+
 #### Rbenv issue with vscode plugin (install, set execution path and restart)
 The accepted answer didn't work for me. However, I did find a comment by jdarnok on this GitHub issue that worked for me.
 
